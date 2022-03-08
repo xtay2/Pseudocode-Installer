@@ -3,7 +3,7 @@ Currently, this repository contains only the pre-alpha installer for Windows.
 (A less edgy installer will be released soon :D)
 
 ### About
-Pseudocode is an imperative language. This repository contains the installer-files, as well as the standard-library "stdlib".
+Pseudocode is an imperative programming language. This repository contains the installer-files, as well as the standard-library "stdlib".
 - [Official website](https://pseudocode.site/)
 - [Official GitHub Project](https://github.com/xtay2/Pseudocode)
 
