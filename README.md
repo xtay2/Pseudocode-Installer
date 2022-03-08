@@ -1,5 +1,6 @@
 ## Pseudocode-Installer
-Currently, this repository contains only the pre-alpha installer for Windows. (A less edgy installer will be released soon :D)
+Currently, this repository contains only the pre-alpha installer for Windows. 
+(A less edgy installer will be released soon :D)
 
 ### Installing
 - Download the archive "pseudocode-win-installer.zip".
