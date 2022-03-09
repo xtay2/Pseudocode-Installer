@@ -2,7 +2,19 @@
 set mypath=%~dp0
 cd %mypath%
 
+echo Administrative permissions required. Detecting permissions...
+    
+net session >nul 2>&1
+if %errorLevel% == 0 (
+	echo Success: Administrative permissions confirmed.
+	goto start
+) else (
+	echo Failure: Current permissions inadequate.
+)
+    
+    pause >nul
 
+:start
 for /F "tokens=*" %%g IN ('javac -version') do (set version=%%g)
 if "%version:~6,2%" neq "17" goto invalidJava
 goto success
@@ -38,6 +50,6 @@ goto success
 :success
 rmdir "C:\Program Files\Pseudocode" /s /q
 xcopy "%mypath%\installer-package" "C:\Program Files\Pseudocode" /E/H/C/I
-setx pseudocode "C:\Program Files\Pseudocode"
+setx path "%path%;C:\Program Files\Pseudocode\"
 echo Installation did successfully finish!
 pause
