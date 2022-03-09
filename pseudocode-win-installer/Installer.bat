@@ -50,6 +50,6 @@ goto success
 :success
 rmdir "%ProgramFiles%\Pseudocode" /s /q
 xcopy "%mypath%\installer-package" "%ProgramFiles%\Pseudocode" /E/H/C/I
-setx path "%path%;%ProgramFiles%\Pseudocode\"
+xcopy "%mypath%\pseudocode.cmd" "%windir%\pseudocode.cmd"*
 echo Installation did successfully finish!
 pause
