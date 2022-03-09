@@ -48,8 +48,8 @@ goto success
 
 
 :success
-rmdir "C:\Program Files\Pseudocode" /s /q
-xcopy "%mypath%\installer-package" "C:\Program Files\Pseudocode" /E/H/C/I
-setx path "%path%;C:\Program Files\Pseudocode\"
+rmdir "%ProgramFiles%\Pseudocode" /s /q
+xcopy "%mypath%\installer-package" "%ProgramFiles%\Pseudocode" /E/H/C/I
+setx path "%path%;%ProgramFiles%\Pseudocode\"
 echo Installation did successfully finish!
 pause
