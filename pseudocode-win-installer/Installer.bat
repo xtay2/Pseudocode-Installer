@@ -10,9 +10,9 @@ if %errorLevel% == 0 (
 	goto start
 ) else (
 	echo Failure: Current permissions inadequate.
+	pause >nul
+	exit
 )
-    
-    pause >nul
 
 :start
 for /F "tokens=*" %%g IN ('javac -version') do (set version=%%g)
