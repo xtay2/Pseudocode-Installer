@@ -39,11 +39,13 @@ if %errorlevel%==2 goto abortUninstall
 exit
 
 :confirmUninstall
-rmdir /Q/S "%ProgramFiles%/Pseudocode"
+rmdir "%ProgramFiles%/Pseudocode" /Q /S 
 del "%windir%/pseudocode.cmd"
 echo Successfully uninstalled pseudocode.
+pause
 exit
 
 :abortUninstall
 echo Aborted the uninstallation.
+pause
 exit
