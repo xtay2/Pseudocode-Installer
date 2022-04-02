@@ -1,7 +1,8 @@
 @echo off
 if "%1" == "help" goto help
 
-if "%1" == "run" goto run
+if "%1" == "run" goto execute
+if "%1" == "format" goto execute
 
 if "%1" == "uninstall" goto uninstall
 
@@ -18,8 +19,8 @@ echo --------------------
 echo:
 exit
 
-:run
-java -jar --enable-preview "%ProgramFiles%/Pseudocode/interpreter.jar" "%ProgramFiles%/Pseudocode/lib" "%CD%"
+:execute
+java -jar --enable-preview "%ProgramFiles%/Pseudocode/interpreter.jar" "%ProgramFiles%/Pseudocode/lib" "%CD%" %1 %2 %3 %4 %5
 exit
 
 :uninstall
@@ -40,7 +41,7 @@ exit
 
 :confirmUninstall
 rmdir "%ProgramFiles%/Pseudocode" /Q /S 
-del "%windir%/pseudocode.cmd"
+(goto) 2>nul & del "%~f0"
 echo Successfully uninstalled pseudocode.
 pause
 exit
