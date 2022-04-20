@@ -40,6 +40,7 @@ if %errorlevel%==2 goto abortUninstall
 exit
 
 :confirmUninstall
+schtasks /delete /tn "Pseudocode Update" /f
 rmdir "%ProgramFiles%/Pseudocode" /Q /S 
 (goto) 2>nul & del "%~f0"
 echo Successfully uninstalled pseudocode.

@@ -51,5 +51,14 @@ goto success
 rmdir "%ProgramFiles%\Pseudocode" /s /q
 xcopy "%mypath%\installer-package" "%ProgramFiles%\Pseudocode" /E/H/C/I
 xcopy "%mypath%\pseudocode.cmd" "%windir%\pseudocode.cmd"*
+echo ---------------------------------------
 echo Installation did successfully finish!
+echo ---------------------------------------
+echo Do you want to automatically update the Pseudocode interpreter on startup?
+echo (This isn't very memory/network-intensive and should take less than 10 seconds.)
+choice /c yn
+if %errorlevel%==2 goto end
+SCHTASKS /CREATE /SC ONSTART /TN "Pseudocode Update" /TR "%ProgramFiles%\Pseudocode"
+
+:end
 pause
