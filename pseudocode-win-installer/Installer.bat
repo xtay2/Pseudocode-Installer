@@ -16,13 +16,13 @@ if %errorLevel% == 0 (
 
 :start
 for /F "tokens=*" %%g IN ('javac -version') do (set version=%%g)
-if "%version:~6,2%" neq "17" goto invalidJava
+if "%version:~6,2%" neq "18" goto invalidJava
 goto success
 
 
 :invalidJava
-echo "Your system needs to install Java 17 to run this software."
-echo Do you want to install jdk17 from the official Oracle website?
+echo "Your system needs to install Java 18 to run this software."
+echo Do you want to install jdk18 from the official Oracle website?
 choice /c yn
 if %errorlevel%==1 goto install
 if %errorlevel%==2 goto abort
@@ -34,16 +34,16 @@ pause
 exit
 
 :install
-curl.exe -o jdk17_installer.msi https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
-start jdk17_installer.msi
+curl.exe -o jdk18_installer.msi https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.msi
+start jdk18_installer.msi
 echo Please continue, when the installation has finished.
 pause
 echo Setting JAVA_HOME
-set JAVA_HOME=C:\Program Files\Java\jdk-17
+set JAVA_HOME=C:\Program Files\Java\jdk-18
 echo setting PATH
-set PATH=C:\Program Files\Java\jdk-17\bin;%PATH%
+set PATH=C:\Program Files\Java\jdk-18\bin;%PATH%
 java -version
-del jdk17_installer.msi
+del jdk18_installer.msi
 goto success
 
 
