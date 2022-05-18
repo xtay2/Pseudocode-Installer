@@ -49,7 +49,7 @@
     <ROW Component="AI_ExePath" ComponentId="{84916A1F-47EB-4497-9E5E-6D3E2E3FECB6}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="APPDIR" ComponentId="{D569CB28-B976-4ED8-A30A-08FCD491737D}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="Arrays.pc" ComponentId="{90A19AFE-ED45-4101-92B2-A5B877768DE4}" Directory_="data_Dir" Attributes="0" KeyPath="Arrays.pc" Type="0"/>
-    <ROW Component="Interpreter.jar" ComponentId="{525C85EA-C77E-46EF-9370-D738C4F90BE4}" Directory_="Pseudocode_Dir" Attributes="0" KeyPath="Interpreter.jar" Type="0"/>
+    <ROW Component="Interpreter.jar" ComponentId="{525C85EA-C77E-46EF-9370-D738C4F90BE4}" Directory_="Pseudocode_Dir" Attributes="0" KeyPath="README.md" Type="0"/>
     <ROW Component="Math.pc" ComponentId="{4BA6C3BA-C31D-4E6F-90CE-051EC347951C}" Directory_="stdlib_Dir" Attributes="0" KeyPath="Math.pc" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{49995B51-5653-40B1-9F5C-F7F652807DAC}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
     <ROW Component="pseudocode.cmd" ComponentId="{695FBFCD-604F-4A1A-AE0D-61707EA22CF5}" Directory_="WindowsFolder" Attributes="0" KeyPath="pseudocode.cmd" Type="0"/>
@@ -65,9 +65,9 @@
     <ROW File="Math.pc" Component_="Math.pc" FileName="Math.pc" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\lib\stdlib\Math.pc" SelfReg="false"/>
     <ROW File="Random.pc" Component_="Math.pc" FileName="Random.pc" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\lib\stdlib\Random.pc" SelfReg="false"/>
     <ROW File="System.pc" Component_="Math.pc" FileName="System.pc" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\lib\stdlib\System.pc" SelfReg="false"/>
-    <ROW File="Interpreter.jar" Component_="Interpreter.jar" FileName="INTERP~1.JAR|Interpreter.jar" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\Interpreter.jar" SelfReg="false"/>
     <ROW File="README.md" Component_="Interpreter.jar" FileName="README.md" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\README.md" SelfReg="false"/>
     <ROW File="pseudocode.cmd" Component_="pseudocode.cmd" FileName="PSEUDO~1.CMD|pseudocode.cmd" Attributes="0" SourcePath="..\pseudocode-win-installer\pseudocode.cmd" SelfReg="false"/>
+    <ROW File="Interpreter.jar" Component_="Interpreter.jar" FileName="INTERP~1.JAR|Interpreter.jar" Attributes="0" SourcePath="..\pseudocode-win-installer\installer-package\Interpreter.jar" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiRemoveFileComponent">
     <ROW RemoveFile="__1" Condition="(AI_CLEAN_RESOURCES_UNINSTALL = &quot;1&quot;) AND (NOT UPGRADINGPRODUCTCODE)" Options="3"/>
