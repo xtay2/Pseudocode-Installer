@@ -11,5 +11,5 @@ Pseudocode is an imperative programming language. This repository contains the i
 For a detailed installation-guide, visit the [wiki](http://wiki.pseudocode/index.php?title=How_to_run).
 
 ### By the way!
-- The windows-installer was build with the awesome [Advanced Installer](https://www.advancedinstaller.com/)-Software by Caphyon.
+The windows-installer was build with the awesome [Advanced Installer](https://www.advancedinstaller.com/)-Software by Caphyon.
 
